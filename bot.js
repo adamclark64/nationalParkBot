@@ -8,7 +8,6 @@ function retweetLatest() {
 	T.get('search/tweets', nationalParkSearch, function (error, data) {
 	  if (!error) {
 		var retweetId = data.statuses[0].id_str;
-		data.statuses[0].favorited = true;
 		T.post('statuses/retweet/' + retweetId, { }, function (error, response) {
 			if (response) {
 				console.log(data.statuses[0]);
