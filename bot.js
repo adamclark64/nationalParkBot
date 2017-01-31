@@ -1,5 +1,5 @@
 var Twit = require('twit');
-// test
+
 var T = new Twit(require('./config.js'));
 
 var nationalParkSearch = {q: "national park filter:images", count: 10, result_type: "recent"};
